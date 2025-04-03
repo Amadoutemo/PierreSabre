@@ -15,14 +15,14 @@ public class Ronin extends Humain {
 	}
 
 	public void provoquer(Yakuza adversaire) {
-		parler("Je t'ai retrouvÃ© vermine, tu vas payer pour ce que tu as fait Ã  ce pauvre marchand!");
+		parler("Je t'ai retrouvé vermine, tu vas payer pour ce que tu as fait à ce pauvre marchand!");
 		int force = honneur * 2;
 
 		if (force >= adversaire.getReputation()) {
 			honneur++;
 			int argentGagne = adversaire.perdre();
 			gagnerArgent(argentGagne);
-			parler("Je tâ€™ai eu petit yakuza!");
+			parler("Je t' ai eu petit yakuza!");
 		} else {
 			honneur--;
 			int argentPerdu = argent;

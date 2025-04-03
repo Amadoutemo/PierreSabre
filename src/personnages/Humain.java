@@ -4,6 +4,8 @@ public class Humain {
 	private String boisson;
 	protected String nom;
 	public int argent;
+	private Humain[] memoire; 
+	private int taille_memoire = 30;
 
 	private String getNom() {
 		return nom;
@@ -37,10 +39,9 @@ public class Humain {
 
 	public void acheter(String bien, int prix) {
 		if (argent >= prix) {
-			parler("J'ai " + getArgent() + " sous en poche. Je vais pouvoir m'offrir " + bien + " ï¿½ " + prix + " sous");
+			parler("J'ai " + getArgent() + " sous en poche. Je vais pouvoir m'offrir " + bien + " à " + prix + " sous");
 		} else {
-			parler("Je n'ai plus que " + argent + " sous en poche. Je ne peux mï¿½me pas m'offrir un kimono ï¿½" + prix
-					+ " sous.");
+			parler("Je n'ai plus que " + argent + " sous en poche. Je ne peux même pas m'offrir un kimono à" + prix + " sous.");
 		}
 
 	}
@@ -51,5 +52,25 @@ public class Humain {
 
 	public void gagnerArgent(int gain) {
 		argent += gain;
+	}
+	public void faireConnaissanceAvec(Humain autrehumain) {
+		direBonjour();
+		autrehumain.direBonjour();
+		}
+	private void memoriser(Humain humain) {
+		for (int i = 0; i < memoire.length; i++) {
+			 memoire = 0; {
+				direBonjour();
+			} else {
+				
+				
+			}
+			
+			
+		}
+	}
+	private void repondre(Humain humain) {
+		direBonjour();
+		
 	}
 }
